@@ -14,5 +14,6 @@ function ExportToPDF(name){
 	var doc = app.activeDocument;
 	var file = new File(doc.path +'/PDF/' + name + '.pdf');
 	var pdfSaveOptions = new PDFSaveOptions()
+	pdfSaveOptions.preserveEditing = false;
 	doc.saveAs(file, pdfSaveOptions, true);	
 }
